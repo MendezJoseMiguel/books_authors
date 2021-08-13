@@ -1,0 +1,476 @@
+Usuario@DESKTOP-0O57KMO MINGW64 ~/Documents/Python-0014/django_projects/book_authors_proj
+$ source ../bloq_env/Scripts/activate
+(bloq_env) 
+Usuario@DESKTOP-0O57KMO MINGW64 ~/Documents/Python-0014/django_projects/book_authors_proj
+$ python manage.py makemigrations
+Migrations for 'books_authors_app':
+  books_authors_app\migrations\0001_initial.py
+    - Create model Books
+    - Create model Authors
+(bloq_env)
+Usuario@DESKTOP-0O57KMO MINGW64 ~/Documents/Python-0014/django_projects/book_authors_proj
+$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, books_authors_app, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying books_authors_app.0001_initial... OK
+  Applying sessions.0001_initial... OK
+(bloq_env)
+Usuario@DESKTOP-0O57KMO MINGW64 ~/Documents/Python-0014/django_projects/book_authors_proj
+$ python manage.py makemigrations
+Did you rename authors.name to authors.first_name (a CharField)? [y/N] n
+You are trying to add a non-nullable field 'first_name' to authors without a default; we can't do that (the database needs something 
+to populate existing rows).
+Please select a fix:
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+ 2) Quit, and let me add a default in models.py
+Select an option: 2
+(bloq_env) 
+Usuario@DESKTOP-0O57KMO MINGW64 ~/Documents/Python-0014/django_projects/book_authors_proj
+$ python manage.py makemigrations
+Did you rename authors.name to authors.first_name (a CharField)? [y/N] y
+You are trying to add a non-nullable field 'last_name' to authors without a default; we can't do that (the database needs something to populate existing rows).
+Please select a fix:
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+ 2) Quit, and let me add a default in models.py
+Select an option: 1
+Please enter the default value now, as valid Python
+The datetime and django.utils.timezone modules are available, so you can do e.g. timezone.now
+Type 'exit' to exit this prompt
+>>>
+Please enter some code, or 'exit' (with no quotes) to exit.
+>>> exit
+(bloq_env) 
+Usuario@DESKTOP-0O57KMO MINGW64 ~/Documents/Python-0014/django_projects/book_authors_proj
+$ python manage.py makemigrations
+You are trying to add a non-nullable field 'last_name' to authors without a default; we can't do that (the database needs something to populate existing rows).
+Please select a fix:
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+ 2) Quit, and let me add a default in models.py
+Select an option: 2
+(bloq_env) 
+Usuario@DESKTOP-0O57KMO MINGW64 ~/Documents/Python-0014/django_projects/book_authors_proj
+$ python manage.py makemigrations
+Did you rename authors.name to authors.first_name (a CharField)? [y/N] y
+You are trying to add a non-nullable field 'last_name' to authors without a default; we can't do that (the database needs something to populate existing rows).
+Please select a fix:
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+ 2) Quit, and let me add a default in models.py
+Select an option: 2
+(bloq_env) 
+Usuario@DESKTOP-0O57KMO MINGW64 ~/Documents/Python-0014/django_projects/book_authors_proj
+$ python manage.py makemigrations
+Did you rename authors.name to authors.first_name (a CharField)? [y/N] y
+You are trying to add a non-nullable field 'last_name' to authors without a default; we can't do that (the database needs something to populate existing rows).
+Please select a fix:
+ 1) Provide a one-off default now (will be set on all existing rows with a null value for this column)
+ 2) Quit, and let me add a default in models.py
+Select an option: 1
+Please enter the default value now, as valid Python
+The datetime and django.utils.timezone modules are available, so you can do e.g. timezone.now
+Type 'exit' to exit this prompt
+>>> jose
+Invalid input: name 'jose' is not defined
+>>> timezone.nom
+Traceback (most recent call last):
+  File "C:\Users\Usuario\Documents\Python-0014\django_projects\book_authors_proj\manage.py", line 22, in <module>
+    main()
+  File "C:\Users\Usuario\Documents\Python-0014\django_projects\book_authors_proj\manage.py", line 18, in main
+    execute_from_command_line(sys.argv)
+  File "C:\Users\Usuario\Documents\Python-0014\django_projects\bloq_env\lib\site-packages\django\core\management\__init__.py", line 419, in execute_from_command_line
+    utility.execute()
+  File "C:\Users\Usuario\Documents\Python-0014\django_projects\bloq_env\lib\site-packages\django\core\management\__init__.py", line 413, in execute
+    self.fetch_command(subcommand).run_from_argv(self.argv)
+  File "C:\Users\Usuario\Documents\Python-0014\django_projects\bloq_env\lib\site-packages\django\core\management\base.py", line 354, 
+in run_from_argv
+    self.execute(*args, **cmd_options)
+  File "C:\Users\Usuario\Documents\Python-0014\django_projects\bloq_env\lib\site-packages\django\core\management\base.py", line 398, 
+in execute
+    output = self.handle(*args, **options)
+  File "C:\Users\Usuario\Documents\Python-0014\django_projects\bloq_env\lib\site-packages\django\core\management\base.py", line 89, in wrapped
+    res = handle_func(*args, **kwargs)
+  File "C:\Users\Usuario\Documents\Python-0014\django_projects\bloq_env\lib\site-packages\django\core\management\commands\makemigrations.py", line 172, in handle
+    changes = autodetector.changes(
+  File "C:\Users\Usuario\Documents\Python-0014\django_projects\bloq_env\lib\site-packages\django\db\migrations\autodetector.py", line 41, in changes
+    changes = self._detect_changes(convert_apps, graph)
+  File "C:\Users\Usuario\Documents\Python-0014\django_projects\bloq_env\lib\site-packages\django\db\migrations\autodetector.py", line 183, in _detect_changes
+    self.generate_added_fields()
+  File "C:\Users\Usuario\Documents\Python-0014\django_projects\bloq_env\lib\site-packages\django\db\migrations\autodetector.py", line 859, in generate_added_fields
+    self._generate_added_field(app_label, model_name, field_name)
+  File "C:\Users\Usuario\Documents\Python-0014\django_projects\bloq_env\lib\site-packages\django\db\migrations\autodetector.py", line 880, in _generate_added_field
+    field.default = self.questioner.ask_not_null_addition(field_name, model_name)
+  File "C:\Users\Usuario\Documents\Python-0014\django_projects\bloq_env\lib\site-packages\django\db\migrations\questioner.py", line 159, in ask_not_null_addition
+    return self._ask_default()
+  File "C:\Users\Usuario\Documents\Python-0014\django_projects\bloq_env\lib\site-packages\django\db\migrations\questioner.py", line 139, in _ask_default
+    return eval(code, {}, {'datetime': datetime, 'timezone': timezone})
+  File "<string>", line 1, in <module>
+AttributeError: module 'django.utils.timezone' has no attribute 'nom'
+(bloq_env) 
+Usuario@DESKTOP-0O57KMO MINGW64 ~/Documents/Python-0014/django_projects/book_authors_proj
+$ python manage.py makemigrations
+No changes detected
+(bloq_env) 
+Usuario@DESKTOP-0O57KMO MINGW64 ~/Documents/Python-0014/django_projects/book_authors_proj
+$ python manage.py makemigrations
+No changes detected
+(bloq_env) 
+Usuario@DESKTOP-0O57KMO MINGW64 ~/Documents/Python-0014/django_projects/book_authors_proj
+$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, contenttypes, sessions
+Running migrations:
+  Applying contenttypes.0001_initial... OK
+  Applying auth.0001_initial... OK
+  Applying admin.0001_initial... OK
+  Applying admin.0002_logentry_remove_auto_add... OK
+  Applying admin.0003_logentry_add_action_flag_choices... OK
+  Applying contenttypes.0002_remove_content_type_name... OK
+  Applying auth.0002_alter_permission_name_max_length... OK
+  Applying auth.0003_alter_user_email_max_length... OK
+  Applying auth.0004_alter_user_username_opts... OK
+  Applying auth.0005_alter_user_last_login_null... OK
+  Applying auth.0006_require_contenttypes_0002... OK
+  Applying auth.0007_alter_validators_add_error_messages... OK
+  Applying auth.0008_alter_user_username_max_length... OK
+  Applying auth.0009_alter_user_last_name_max_length... OK
+  Applying auth.0010_alter_group_name_max_length... OK
+  Applying auth.0011_update_proxy_permissions... OK
+  Applying auth.0012_alter_user_first_name_max_length... OK
+  Applying sessions.0001_initial... OK
+(bloq_env)
+Usuario@DESKTOP-0O57KMO MINGW64 ~/Documents/Python-0014/django_projects/book_authors_proj
+$ python manage.py makemigrations books_authors_app/
+No installed app with label 'books_authors_app/'.
+(bloq_env) 
+Usuario@DESKTOP-0O57KMO MINGW64 ~/Documents/Python-0014/django_projects/book_authors_proj
+$ python manage.py makemigrations books_authors_app
+Migrations for 'books_authors_app':
+  books_authors_app\migrations\0001_initial.py
+    - Create model Books
+    - Create model Authors
+(bloq_env)
+Usuario@DESKTOP-0O57KMO MINGW64 ~/Documents/Python-0014/django_projects/book_authors_proj
+$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, books_authors_app, contenttypes, sessions
+Running migrations:
+  Applying books_authors_app.0001_initial... OK
+(bloq_env)
+Usuario@DESKTOP-0O57KMO MINGW64 ~/Documents/Python-0014/django_projects/book_authors_proj
+$ touch consultasbash.txt
+(bloq_env)
+Usuario@DESKTOP-0O57KMO MINGW64 ~/Documents/Python-0014/django_projects/book_authors_proj
+$ Books.objects.create(title = "C Sharp", desc = "Todo sobre C Sharp")
+bash: syntax error near unexpected token `title'
+(bloq_env)
+Usuario@DESKTOP-0O57KMO MINGW64 ~/Documents/Python-0014/django_projects/book_authors_proj
+$ cd book
+book_authors_proj/ books_authors_app/
+(bloq_env)
+Usuario@DESKTOP-0O57KMO MINGW64 ~/Documents/Python-0014/django_projects/book_authors_proj
+$ cd book_authors_proj_app
+bash: cd: book_authors_proj_app: No such file or directory
+(bloq_env)
+Usuario@DESKTOP-0O57KMO MINGW64 ~/Documents/Python-0014/django_projects/book_authors_proj
+$ Books.objects.create(title = "C Sharp", desc = "Todo sobre C Sharp")
+bash: syntax error near unexpected token `title'
+(bloq_env)
+Usuario@DESKTOP-0O57KMO MINGW64 ~/Documents/Python-0014/django_projects/book_authors_proj
+$ python manage.py shell -i ipython
+Python 3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.26.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: from books_authors_app.models import Books,Authors
+
+In [2]: Books.objects.create(title = "C Sharp", desc = "Todo Sobre C Sharp")
+Out[2]: C Sharp
+
+In [3]: Books.objects.create(title = "Java", desc = "Para programadores masoquistas")
+Out[3]: Java
+
+In [4]: Books.objects.create(title = "Python", desc = "Para programadores felices")
+Out[4]: Python
+
+In [5]: Books.objects.create(title = "PHP", desc = "Para dinosaurios")
+Out[5]: PHP
+
+In [6]: Books.objects.create(title = "Ruby", desc = "Tambien es bueno")
+Out[6]: Ruby
+
+In [7]: Authors.objects.create(fist_name = "Jane", last_name = "Austen")
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-7-21dfd7cccdd7> in <module>
+----> 1 Authors.objects.create(fist_name = "Jane", last_name = "Austen")
+
+~\Documents\Python-0014\django_projects\bloq_env\lib\site-packages\django\db\models\manager.py in manager_method(self, *args, **kwargs)
+     83         def create_method(name, method):
+     84             def manager_method(self, *args, **kwargs):
+---> 85                 return getattr(self.get_queryset(), name)(*args, **kwargs)
+     86             manager_method.__name__ = method.__name__
+     87             manager_method.__doc__ = method.__doc__
+
+~\Documents\Python-0014\django_projects\bloq_env\lib\site-packages\django\db\models\query.py in create(self, **kwargs)
+    449         and returning the created object.
+    450         """
+--> 451         obj = self.model(**kwargs)
+    452         self._for_write = True
+    453         obj.save(force_insert=True, using=self.db)
+
+~\Documents\Python-0014\django_projects\bloq_env\lib\site-packages\django\db\models\base.py in __init__(self, *args, **kwargs)       
+    501                     pass
+    502             for kwarg in kwargs:
+--> 503                 raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+    504         super().__init__()
+    505         post_init.send(sender=cls, instance=self)
+
+TypeError: Authors() got an unexpected keyword argument 'fist_name'
+
+In [8]: Authors.objects.create(first_name = "Jane", last_name = "Austen")
+Out[8]: ---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+~\Documents\Python-0014\django_projects\bloq_env\lib\site-packages\IPython\core\formatters.py in __call__(self, obj)
+    700                 type_pprinters=self.type_printers,
+    701                 deferred_pprinters=self.deferred_printers)
+--> 702             printer.pretty(obj)
+    703             printer.flush()
+    704             return stream.getvalue()
+
+~\Documents\Python-0014\django_projects\bloq_env\lib\site-packages\IPython\lib\pretty.py in pretty(self, obj)
+    392                         if cls is not object \
+    393                                 and callable(cls.__dict__.get('__repr__')):
+--> 394                             return _repr_pprint(obj, self, cycle)
+    395
+    396             return _default_pprint(obj, self, cycle)
+
+~\Documents\Python-0014\django_projects\bloq_env\lib\site-packages\IPython\lib\pretty.py in _repr_pprint(obj, p, cycle)
+    698     """A pprint that just redirects to the normal repr function."""
+    699     # Find newlines and replace them with p.break_()
+--> 700     output = repr(obj)
+    701     lines = output.splitlines()
+    702     with p.group():
+
+~\Documents\Python-0014\django_projects\book_authors_proj\books_authors_app\models.py in __repr__(self)
+     19
+     20     def __repr__(self) -> str:
+---> 21         return f'{self.name}: {self.books}'
+
+AttributeError: 'Authors' object has no attribute 'name'
+
+In [9]: Authors.objects.create(first_name = "Jane", last_name = "Austen")
+Out[9]: ---------------------------------------------------------------------------
+AttributeError                            Traceback (most recent call last)
+~\Documents\Python-0014\django_projects\bloq_env\lib\site-packages\IPython\core\formatters.py in __call__(self, obj)
+    700                 type_pprinters=self.type_printers,
+    701                 deferred_pprinters=self.deferred_printers)
+--> 702             printer.pretty(obj)
+    703             printer.flush()
+    704             return stream.getvalue()
+
+~\Documents\Python-0014\django_projects\bloq_env\lib\site-packages\IPython\lib\pretty.py in pretty(self, obj)
+    392                         if cls is not object \
+    393                                 and callable(cls.__dict__.get('__repr__')):
+--> 394                             return _repr_pprint(obj, self, cycle)
+    395
+    396             return _default_pprint(obj, self, cycle)
+
+~\Documents\Python-0014\django_projects\bloq_env\lib\site-packages\IPython\lib\pretty.py in _repr_pprint(obj, p, cycle)
+    698     """A pprint that just redirects to the normal repr function."""
+    699     # Find newlines and replace them with p.break_()
+--> 700     output = repr(obj)
+    701     lines = output.splitlines()
+    702     with p.group():
+
+~\Documents\Python-0014\django_projects\book_authors_proj\books_authors_app\models.py in __repr__(self)
+     19
+     20     def __repr__(self) -> str:
+---> 21         return f'{self.first_name}:{self.last_name}: {self.books}'
+
+AttributeError: 'Authors' object has no attribute 'name'
+
+In [10]: exit
+(bloq_env) 
+Usuario@DESKTOP-0O57KMO MINGW64 ~/Documents/Python-0014/django_projects/book_authors_proj
+$ python manage.py makemigrations books_authors_app
+No changes detected in app 'books_authors_app'
+(bloq_env) 
+Usuario@DESKTOP-0O57KMO MINGW64 ~/Documents/Python-0014/django_projects/book_authors_proj
+$ python manage.py migrate
+Operations to perform:
+  Apply all migrations: admin, auth, books_authors_app, contenttypes, sessions
+Running migrations:
+  No migrations to apply.
+(bloq_env)
+Usuario@DESKTOP-0O57KMO MINGW64 ~/Documents/Python-0014/django_projects/book_authors_proj
+$ python manage.py shell -i ipython
+Python 3.9.5 (tags/v3.9.5:0a7dcbd, May  3 2021, 17:27:52) [MSC v.1928 64 bit (AMD64)]
+Type 'copyright', 'credits' or 'license' for more information
+IPython 7.26.0 -- An enhanced Interactive Python. Type '?' for help.
+
+In [1]: from books_authors_app.models import Books,Authors
+
+In [2]: Authors.objects.create(first_name = "Jane", last_name = "Austen")
+Out[2]: Jane:Austen: books_authors_app.Books.None
+
+In [2]: Authors.objects.create(first_name = "Emily", last_name = "Dickinson")
+Out[2]: Emily:Dickinson: books_authors_app.Books.None
+
+In [3]: Authors.objects.create(first_name = "Fyodor", last_name = "Dostoevksy")
+Out[3]: Fyodor:Dostoevksy: books_authors_app.Books.None
+
+In [4]: Authors.objects.create(first_name = "William", last_name = "Shakespeare")
+Out[4]: William:Shakespeare: books_authors_app.Books.None
+
+In [5]: Authors.objects.create(first_name = "Lau", last_name = "Tzu")
+Out[5]: Lau:Tzu: books_authors_app.Books.None
+
+autor4
+Out[74]: William:Shakespeare: books_authors_app.Books.None
+
+In [75]: autor4.first_name = "Bill"
+
+In [76]: autor4.save()
+
+In [3]: autor2 = Authors.objects.get(id=2)
+
+In [4]: autor2
+Out[4]: Emily:Dickinson: books_authors_app.Books.None
+
+In [5]: libro1 = Books.objects.get(id=1)
+
+In [6]: libro2 = Books.objects.get(id=2)
+
+In [7]: libro3 = Books.objects.get(id=3)
+
+In [8]: libro1.publishers.add(autor2)
+
+In [9]: libro2.publishers.add(autor2)
+
+In [10]: libro3.publishers.add(autor2)
+
+In [11]: autor3 = Authors.objects.get(id=3)
+
+In [12]: libro4 = Books.objects.get(id=4)
+
+In [13]: libro4
+Out[13]: PHP. Para dinosaurios
+
+In [14]: libro1.publishers.add(autor3)
+
+In [15]: libro2.publishers.add(autor3)
+
+In [16]: libro3.publishers.add(autor3)
+
+In [17]: libro4.publishers.add(autor3)
+
+In [18]: autor5 = Authors.objects.get(id=5)
+
+In [19]: autor5
+Out[19]: Lau:Tzu: books_authors_app.Books.None
+
+In [20]: libro5 = Books.objects.get(id=5)
+
+In [21]: autor4
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-21-abb186c177f9> in <module>
+----> 1 autor4
+
+NameError: name 'autor4' is not defined
+
+In [22]: autor4 = Authors.objects.get(id=4)
+
+In [23]: libro1.publishers.add(autor4)
+
+In [24]: libro2.publishers.add(autor4)
+
+In [25]: libro3.publishers.add(autor4)
+
+In [26]: libro4.publishers.add(autor4)
+
+In [27]: libro5.publishers.add(autor4)
+
+In [11]: autor3 = Authors.objects.get(id=3)
+
+In [12]: libro4 = Books.objects.get(id=4)
+
+In [13]: libro4
+Out[13]: PHP. Para dinosaurios
+
+In [14]: libro1.publishers.add(autor3)
+
+In [15]: libro2.publishers.add(autor3)
+
+In [16]: libro3.publishers.add(autor3)
+
+In [17]: libro4.publishers.add(autor3)
+
+In [18]: autor5 = Authors.objects.get(id=5)
+
+In [19]: autor5
+Out[19]: Lau:Tzu: books_authors_app.Books.None
+
+In [20]: libro5 = Books.objects.get(id=5)
+
+In [21]: autor4
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-21-abb186c177f9> in <module>
+----> 1 autor4
+
+NameError: name 'autor4' is not defined
+
+In [22]: autor4 = Authors.objects.get(id=4)
+
+In [23]: libro1.publishers.add(autor4)
+
+In [24]: libro2.publishers.add(autor4)
+
+In [25]: libro3.publishers.add(autor4)
+
+In [26]: libro4.publishers.add(autor4)
+
+In [27]: libro5.publishers.add(autor4)
+
+In [29]: libro3.publishers.all()
+Out[29]: <QuerySet [Emily:Dickinson: books_authors_app.Books.None, Fyodor:Dostoevksy: books_authors_app.Books.None, Bill:Shakespeare: books_authors_app.Books.None]>
+
+del1 = libro3.publishers.first()
+
+In [32]: del1
+Out[32]: Emily:Dickinson: books_authors_app.Books.None
+
+In [33]: del1.delete()
+Out[33]: (4, {'books_authors_app.Authors_books': 3, 'books_authors_app.Authors': 1})
+
+In [34]: del1.save()
+
+In [35]: libro3.publishers.all()
+Out[35]: <QuerySet [Fyodor:Dostoevksy: books_authors_app.Books.None, Bill:Shakespeare: books_authors_app.Books.None]>
+
+In [36]: libro2.publishers.add(autor5)
+
+In [37]: autor3.books.all()
+Out[37]: <QuerySet [C#. Todo Sobre C Sharp, Java. Para programadores masoquistas, Python. Para programadores felices, PHP. Para dinosaurios]>
+
+In [38]: libro5.publishers.all()
+Out[38]: <QuerySet [Bill:Shakespeare: books_authors_app.Books.None]>
+
